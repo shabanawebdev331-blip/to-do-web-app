@@ -13,12 +13,16 @@ Technologies Used
 HTML5 – Structure of the application
 CSS3 – Styling and responsive design
 JavaScript – Task management and interactivity
+
 **Getting Started**
+
 **Clone the Repository**
 git clone https://github.com/your-username/to-do-web-app.git
- **Run the Project**
+
+**Run the Project**
 Navigate to the project directory:
 cd to-do-web-app
+
 **Project Structure**
 to-do-web-app/
 │
@@ -27,6 +31,7 @@ to-do-web-app/
 │   └── style.css
 └── script/
     └── script.js
+    
 **Purpose**
 This project was created to practice fundamental web development concepts, including DOM manipulation, event handling, JavaScript functions, CSS styling, and responsive web design.
 
