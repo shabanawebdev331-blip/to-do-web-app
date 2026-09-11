@@ -49,7 +49,6 @@ to-do-web-app/
 │   └── style.css
 
 └── script/
-
     └── script.js
     
 **Purpose**
