@@ -1,0 +1,338 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #eef1e5;
+    color: #30351f;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container {
+    width: 100%;
+    max-width: 650px;
+
+    background: #ffffff;
+
+    padding: 35px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 10px 30px rgba(60, 70, 30, 0.15);
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+h1 {
+    text-align: center;
+
+    color: #556b2f;
+
+    font-size: 2.2rem;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   INPUT + BUTTON AREA
+========================= */
+
+.container > div:nth-child(2) {
+    display: flex;
+    gap: 10px;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   INPUT
+========================= */
+
+#task {
+    flex: 1;
+
+    min-width: 0;
+
+    padding: 13px 15px;
+
+    font-size: 1rem;
+
+    border: 2px solid #c5ccb0;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    color: #30351f;
+
+    background: #fafbf7;
+
+    transition: 0.2s ease;
+}
+
+
+/* Input focus */
+
+#task:focus {
+    border-color: #6b7f3a;
+
+    box-shadow: 0 0 0 3px rgba(107, 127, 58, 0.15);
+}
+
+
+/* =========================
+   GENERAL BUTTON
+========================= */
+
+button {
+    border: none;
+
+    border-radius: 10px;
+
+    padding: 12px 18px;
+
+    font-size: 0.95rem;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+/* =========================
+   ADD BUTTON
+========================= */
+
+.container > div:nth-child(2) button:first-of-type {
+    background: #6b7f3a;
+
+    color: white;
+}
+
+.container > div:nth-child(2) button:first-of-type:hover {
+    background: #556b2f;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   DELETE ALL BUTTON
+========================= */
+
+.container > div:nth-child(2) button:last-of-type {
+    background: #e8eadc;
+
+    color: #556b2f;
+}
+
+.container > div:nth-child(2) button:last-of-type:hover {
+    background: #d9ddc7;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   TASK LIST
+========================= */
+
+#taskList {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+/* =========================
+   TASK DIV
+========================= */
+
+#taskList > div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 14px 16px;
+
+    background: #f4f6ed;
+
+    border-left: 5px solid #6b7f3a;
+
+    border-radius: 10px;
+
+    transition: 0.2s ease;
+}
+
+
+/* Task hover */
+
+#taskList > div:hover {
+    transform: translateX(3px);
+
+    box-shadow: 0 4px 12px rgba(60, 70, 30, 0.1);
+}
+
+
+/* =========================
+   TASK TEXT
+========================= */
+
+#taskList p {
+    flex: 1;
+
+    margin: 0;
+
+    font-size: 1rem;
+
+    line-height: 1.4;
+
+    word-break: break-word;
+}
+
+
+/* =========================
+   EDIT BUTTON
+========================= */
+
+#taskList button:first-of-type {
+    background: #7d8f4a;
+
+    color: white;
+
+    padding: 8px 13px;
+
+    font-size: 0.8rem;
+}
+
+#taskList button:first-of-type:hover {
+    background: #657638;
+}
+
+
+/* =========================
+   DELETE BUTTON
+========================= */
+
+#taskList button:last-of-type {
+    background: #d9ddc7;
+
+    color: #4d5d2b;
+
+    padding: 8px 13px;
+
+    font-size: 0.8rem;
+}
+
+#taskList button:last-of-type:hover {
+    background: #c7ccb2;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .container {
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+    .container {
+        padding: 20px;
+
+        border-radius: 14px;
+    }
+
+    h1 {
+        font-size: 1.7rem;
+
+        margin-bottom: 20px;
+    }
+
+    /* Stack input and buttons */
+
+    .container > div:nth-child(2) {
+        flex-direction: column;
+    }
+
+    #task {
+        width: 100%;
+    }
+
+    .container > div:nth-child(2) button {
+        width: 100%;
+    }
+
+
+    /* Task card */
+
+    #taskList > div {
+        align-items: flex-start;
+
+        flex-wrap: wrap;
+    }
+
+    #taskList p {
+        width: 100%;
+
+        flex-basis: 100%;
+    }
+
+    #taskList button {
+        flex: 1;
+    }
+
+}
